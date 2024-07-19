@@ -1,0 +1,122 @@
+<!-- <mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+        <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    Responsive side navigation
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+
+        <h4 class="name">John Smith</h4>
+        <p class="designation">Software Engineer</p>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/profile">
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/about">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/help">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+<!-- Navbar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> -->
+<!-- <nav class="navbar">
+    <div class="navbar-container">
+      <li class="nav-item"><a href="/" class="nav-link">בית</a></li>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="/login" class="nav-link">התחברות</a></li>
+        <li class="nav-item" (click)="register()"><a class="nav-link">הרשמה</a></li>
+        <li class="nav-item"><a href="/allRecipes" class="nav-link">כל המתכונים</a></li>
+        <li class="nav-item" *ngIf="!isGuest"><a href="/recipeForm/add" class="nav-link">הוספת מתכון</a></li>
+        <li class="nav-item" *ngIf="!isGuest" (click)="signOut()"><a href="" class="nav-link"> התנתקות</a></li>
+        <li class="nav-item" *ngIf="!isGuest"><a href="/myRecipes" class="nav-link"> המתכונים שלי</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+ <!-- <mat-toolbar color="primary" class="app-bar">
+  <button mat-button routerLink="/" class="app-bar-logo">Navbar</button>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/login" (click)="login()">התחברות</button>
+  <button mat-button (click)="register()">הרשמה</button>
+  <button mat-button routerLink="/allRecipes" (click)="allRecipes()">כל המתכונים</button>
+  <button mat-button *ngIf="!isGuest" routerLink="/recipeForm/add" (click)="addRecipe()">הוספת מתכון</button>
+  <button mat-button *ngIf="!isGuest" (click)="signOut()">התנתקות</button>
+  <button mat-button *ngIf="!isGuest" routerLink="/myRecipes" (click)="myRecipes()">המתכונים שלי</button>
+  <button mat-button *ngIf="isManager" routerLink="/users" (click)="users()">משתמשים</button>
+</mat-toolbar>
+<app-welcome></app-welcome> 
+ -->
+ <mat-toolbar color="primary" class="app-bar">
+  <div class="navbar-container" fxLayout="row" fxLayoutAlign="center center">
+    <button mat-button routerLink="/" class="app-bar-logo">אתר המתכונים שלי</button>
+    <span class="spacer"></span>
+    <div class="nav-links" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <button mat-button routerLink="/login" (click)="login()">התחברות</button>
+      <button mat-button (click)="register()">הרשמה</button>
+      <button mat-button routerLink="/allRecipes" (click)="allRecipes()">כל המתכונים</button>
+      <button mat-button *ngIf="!isGuest" routerLink="/recipeForm/add" (click)="addRecipe()">הוספת מתכון</button>
+      <button mat-button *ngIf="!isGuest" (click)="signOut()">התנתקות</button>
+      <button mat-button *ngIf="!isGuest" routerLink="/myRecipes" (click)="myRecipes()">המתכונים שלי</button>
+      <button mat-button *ngIf="isManager" routerLink="/users" (click)="users()">משתמשים</button>
+    </div>
+  </div>
+</mat-toolbar>
+<app-welcome></app-welcome>

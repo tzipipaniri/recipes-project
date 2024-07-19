@@ -1,0 +1,275 @@
+<!-- <select id="recipeTags" #selectCategory  class="form-control select" multiple>
+  <option *ngFor="let c of categories" name="c.description" id="c.description">{{c.description}}</option>
+</select> -->
+<app-navbar></app-navbar>
+<form [formGroup]="userForm">
+  <mat-label>שם</mat-label>
+  <mat-form-field>
+    <input matInput formControlName="name">
+
+  </mat-form-field>
+  <div *ngIf="showErrors && userForm.controls['name'].errors">
+    <mat-error>
+      {{ getErrorMessages2(userForm.controls['name'].errors) }}
+    </mat-error>
+  </div>
+  <br />
+  <mat-label>תאור</mat-label>
+  <mat-form-field>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+  <div *ngIf="showErrors && userForm.controls['description'].errors">
+    <mat-error>
+      {{ getErrorMessages2(userForm.controls['description'].errors) }}
+    </mat-error>
+  </div>
+
+  <!-- <mat-form-field>
+    <mat-label>Categories</mat-label>
+    <mat-select [formControl]="toppings" multiple panelClass="custom-select-panel">
+      <mat-select-trigger>
+        {{toppings.value?.[0] || ''}}
+        @if ((toppings.value?.length || 0) > 1) {
+        <span class="example-additional-selection">
+          (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+        }
+      </mat-select-trigger>        
+      <mat-option *ngFor="let topping of categoriesSelect" [value]="topping">{{topping}}</mat-option>
+    </mat-select>
+  </mat-form-field>   -->
+  <!-- <mat-form-field> -->
+  <br />
+
+  <div *ngIf="id=='add'">
+    <mat-label>קטגוריות</mat-label>
+    <select multiple [(ngModel)]="selectedCategories" (change)="onCategoriesChange($event)">
+      <option *ngFor="let category of categoriesSelect" [selected]="ifSelected(category)" [value]="category">{{ category
+        }}</option>
+    </select>
+    <!-- </mat-form-field> -->
+    <br />
+
+
+    <mat-label>קטגוריה חדשה</mat-label>
+    <mat-form-field>
+      <textarea matInput formControlName="categories"></textarea>
+    </mat-form-field>
+    <div *ngIf="showErrors && userForm.controls['categories'].errors">
+      <mat-error>
+        {{ getErrorMessages2(userForm.controls['categories'].errors) }}
+      </mat-error>
+    </div>
+  </div>
+
+  <br />
+
+  <mat-label>זמן הכנה בדקות</mat-label>
+  <mat-form-field appearance="fill">
+    <input matInput type="number" [defaultValue]="10" min="1" formControlName="preparationTimeInMinutes">
+  </mat-form-field>
+  <div *ngIf="showErrors && userForm.controls['preparationTimeInMinutes'].errors">
+    <mat-error>
+      {{ getErrorMessages2(userForm.controls['preparationTimeInMinutes'].errors) }}
+    </mat-error>
+  </div>
+  <br />
+
+  <mat-label>רמת קושי</mat-label>
+  <mat-form-field appearance="fill">
+    <input matInput type="number" min="1" max=5 formControlName="difficulty">
+  </mat-form-field>
+  <div *ngIf="showErrors && userForm.controls['difficulty'].errors">
+    <mat-error>
+      {{ getErrorMessages2(userForm.controls['difficulty'].errors) }}
+    </mat-error>
+  </div>
+  <!-- <mat-form-field>
+  <mat-label>בח</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+{{userForm.controls['data'].errors | json}} -->
+  <h1>שכבות</h1>
+  <!-- <div formGroupName="layers" *ngFor="let layer of layers">
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="description1" [(ngModel)]="layer.description"
+        formControlName="description2">{{layer.description}}</textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ingredients</mat-label>
+      <textarea matInput [(ngModel)]="ingredients" [(ngModel)]="layer.ingredients[0]"
+        formControlName="ingredients">{{layer.ingredients[0]}}</textarea>
+    </mat-form-field>
+  </div>
+  <section>
+    <div class="example-button-row">
+      <button mat-button color="warn" (click)="AddLayer(description1,ingredients)">הוסף שיכבה</button>
+    </div>
+  </section> -->
+
+  <!-- <ng-container formArrayName="layers">
+    <div *ngFor="let layerControl of layersArray.controls; let i=index" [formGroupName]="i">
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+        <mat-error *ngIf="layerControl.get('description')?.hasError('required')">Description is required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Ingredients</mat-label>
+        <input matInput formControlName="ingredients">
+        <mat-error *ngIf="layerControl.get('ingredients')?.hasError('required')">Ingredients are required</mat-error>
+      </mat-form-field>
+      
+   
+      <button mat-icon-button color="warn" *ngIf="layersArray.length > 1" (click)="removeLayer(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </ng-container> 
+
+
+  
+  <button mat-button color="primary" (click)="addLayer()">Add Layer</button>-->
+  <!-- <ng-container formArrayName="ingredients">
+          <ng-container *ngFor="let control of getIngredientsArray(i)?.controls; let i=index">
+            <input type="text" [formControl]="getFormControl(control)" (input)="onInputChange($event, i)">
+            <mat-error *ngIf="control.hasError('required')">Instruction is required.</mat-error>
+            <mat-error *ngIf="control.hasError('minlength')">Instruction must be at least 3 characters long.</mat-error>
+          </ng-container>
+        </ng-container> -->
+  <!-- <ng-container formArrayName="layers">
+    <div *ngFor="let layer of layersArray.controls; let i = index">
+      <div class="layer">
+        <input type="text" formControlName="description" placeholder="Description">
+        <div formArrayName="ingredients" *ngIf="layer.get('ingredients')">
+          <div *ngFor="let ingredient of getIngredientsArray(i); let j = index">
+            <input type="text" placeholder="Ingredient" [formControl]="getFormControl(ingredient)" (input)="onIngredientInput(i, j,$event)">
+          </div>
+        </div>
+        
+      </div>
+      <button type="button" (click)="removeLayer(i)">Remove Layer</button>
+    </div>
+  </ng-container>
+  <button type="button" (click)="addLayer()">Add Layer</button> -->
+  <!-- <ng-container formArrayName="layers">
+    <div *ngFor="let layer of layersArray.controls; let i = index">
+      <div class="layer">
+        <input type="text" formControlName="description" placeholder="Description">
+        <div formArrayName="ingredients">
+            <div *ngFor="let ingredient of getIngredientsArray(i); let j = index">
+            <input type="text" placeholder="Ingredient" [formControl]="getFormControl(ingredient)" (input)="onIngredientInput(i, j,$event)">
+          </div>
+        </div>
+      </div>
+      <button type="button" (click)="removeLayer(i)">Remove Layer</button>
+    </div>
+  </ng-container> -->
+  <!-- gpt -->
+  <div formArrayName="layers">
+    <div *ngFor="let layer of layersArray.controls; let i = index" [formGroupName]="i">
+      <!-- <input formControlName="description" placeholder="Layer Description"> -->
+      <mat-form-field>
+        <input matInput formControlName="description" placeholder="תאור שכבה">
+
+      </mat-form-field>
+      <div formArrayName="ingredients">
+        <div *ngFor="let ingredient of getIngredientsArray(i).controls; let j = index">
+          <!-- <input [formControlName]="j" (input)="onIngredientInputChange($event, i, j)" placeholder="Ingredient"> -->
+          <mat-form-field>
+            <input matInput [formControlName]="j" (input)="onIngredientInputChange($event, i, j)" placeholder="מרכיב">
+
+          </mat-form-field>
+        </div>
+      </div>
+      <button type="button" (click)="removeLayer(i)">מחק שכבה</button>
+    </div>
+  </div>
+  <button type="button" (click)="addLayer()">הוסף שכבה</button>
+  <br />
+
+  <mat-label>הוראות הכנה</mat-label>
+
+  <ng-container formArrayName="instructions">
+    <ng-container *ngFor="let control of instructionsArray.controls; let i=index">
+      <input type="text" [formControl]="getFormControl(control)" (input)="onInputChange($event, i)">
+      <!-- <mat-error *ngIf="control.hasError('required')">הוראה חובה</mat-error>
+      <mat-error *ngIf="control.hasError('minlength')">חייב להכיל לפחות 3 תוים</mat-error> -->
+      <div *ngIf="showErrors && userForm.controls['instructions'].errors">
+        <mat-error>
+          {{ getErrorMessages2(userForm.controls['instructions'].errors) }}
+        </mat-error>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <!-- <mat-form-field>
+    <mat-label>Instruction</mat-label>
+    <textarea matInput formControlName="ingredients" 
+      [(ngModel)]="instruction1"></textarea>
+  </mat-form-field> -->
+  <!-- Add other form controls here -->
+
+  <!-- Add other form controls here -->
+  <!-- גמיני -->
+  <!-- <ng-container *ngIf="userForm.get('instruction')">
+    <div *ngFor="let instructionControl of instructionControls; let i = index">
+      <mat-form-field>
+        <mat-label>Instruction {{ i + 1 }}</mat-label>
+        <textarea matInput formControlName="{{ i }}"></textarea>
+        <mat-error *ngIf="instructionControl.hasError('required')">Instruction is required.</mat-error>
+        <mat-error *ngIf="instructionControl.hasError('minlength')">Instruction must be at least 3 characters long.</mat-error>
+      </mat-form-field>
+    </div>
+  </ng-container> -->
+
+
+
+  <!-- Add other form controls here -->
+
+
+  <!-- Add other form controls here -->
+
+
+  <!-- <section> 
+  <div class="example-button-row">
+    <button mat-button color="warn" (click)="AddInstruction(ingredients)">הוסף שיכבה</button>
+  </div>
+</section> -->
+  <br />
+
+  <section class="example-section" *ngIf="id=='add'">
+    <mat-checkbox class="example-margin" formControlName="isPrivate">פרטי</mat-checkbox>
+  </section>
+  <!-- Image upload field -->
+  <p *ngIf="id!='add'">אם ברצונך לשנות את התמונה העלה תמונה חדשה</p>
+  <div>
+    <label for="file">העלאת תמונה</label>
+    <input type="file" id="file" (change)="onFileChange($event)">
+  </div>
+  <div *ngIf="imagePreview">
+    <img [src]="imagePreview" alt="Preview" width="200">
+  </div>
+  <br />
+
+  <section>
+    <div class="example-button-row">
+      <button mat-button color="warn" (click)="save()"> שמור</button>
+    </div>
+  </section>
+</form>
+
+<!-- <div>{{ userForm.value | json }}</div>
+<div>{{ userForm.errors | json }}</div>
+
+<div>
+  Form valid: {{ userForm.valid }}
+</div>
+<div *ngFor="let control of userForm.controls | keyvalue">
+  <div>{{ control.key }} valid: {{ control.value.valid }}</div>
+</div> -->

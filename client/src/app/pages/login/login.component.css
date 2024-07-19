@@ -1,0 +1,27 @@
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  direction: ltr;
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-container mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login-container .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.login-container button {
+  width: 48%;
+}/*# sourceMappingURL=login.component.css.map */

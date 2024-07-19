@@ -1,0 +1,154 @@
+// .example-card {
+//     max-width: 400px;
+//   }
+  
+//   .example-header-image {
+//     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//     background-size: cover;
+//   }
+
+//   .example-form {
+//     min-width: 150px;
+//     max-width: 500px;
+//     width: 100%;
+//   }
+  
+//   .example-full-width {
+//     width: 100%;
+//   }
+
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+
+  .example-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .example-full-width {
+      width: 100%;
+    }
+
+    .button-section {
+      display: flex;
+      justify-content: flex-start;
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .recipes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .pagination-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      margin: 10px;
+    }
+  }
+}
+.example-form {
+  max-width: 500px; /* Set maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.mat-form-field {
+  margin-bottom: 20px; /* Add spacing between form fields */
+}
+.example-form {
+  max-width: 500px; /* Set maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.mat-form-field {
+  margin-bottom: 20px; /* Add spacing between form fields */
+}
+
+.example-form {
+  max-width: 500px; /* Set maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add some padding for spacing */
+  direction: rtl; /* Set overall text direction to right-to-left */
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Add spacing between form fields */
+}
+
+mat-input,
+textarea {
+  text-align: right; /* Align text within input fields from right to left */
+  padding: 10px; /* Add some padding for input fields */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+mat-select {
+  text-align: right; /* Align text within select options from right to left */
+  padding: 10px; /* Add some padding for select field */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+.mat-label {
+  text-align: right; /* Align text within labels from right to left */
+  padding-left: 10px; /* Add some left padding for separation */
+}
+
+.example-button-row {
+  text-align: center; /* Align buttons to the right */
+}
+.example-form {
+  max-width: 500px; /* Set maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add some padding for spacing */
+  direction: rtl; /* Set overall text direction to right-to-left */
+}
+
+.form-field {
+  display: flex; /* Enable Flexbox for each field */
+  flex-direction: column; /* Arrange label and input vertically */
+  margin-bottom: 20px; /* Add spacing between fields */
+  flex-basis: 200px; /* Set initial width for each field */
+}
+
+mat-input,
+textarea {
+  text-align: right; /* Align text within input fields from right to left */
+  padding: 10px; /* Add some padding for input fields */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px; /* Add rounded corners */
+  width: 100%; /* Make inputs occupy full width */
+}
+
+mat-select {
+  text-align: right; /* Align text within select options from right to left */
+  padding: 10px; /* Add some padding for select field */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px; /* Add rounded corners */
+  width: 100%; /* Make select occupy full width */
+}
+
+.mat-label {
+  text-align: right; /* Align text within labels from right to left */
+  padding-left: 10px; /* Add some left padding for separation */
+}
+
+.example-button-row {
+  text-align: center; /* Align buttons to the right */
+}

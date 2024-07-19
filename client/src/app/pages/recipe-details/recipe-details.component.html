@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<!-- <div class="recipe-container mat-grid-list mat-cell-checklist row">
+  <mat-grid-tile class="recipe-details mat-cell" colspan="6" xs="12"> -->
+
+<mat-card-header>
+  תאריך <p>{{formattedDate}}</p>
+  <mat-card-title>
+    <h1> {{ recipe?.name }} </h1>
+    <h2> {{ recipe?.description }} </h2>
+  </mat-card-title>
+  <h3>קטגוריות</h3>
+  @for (category of recipe?.categories; track category) {
+  <!-- <mat-card-subtitle> {{ category.description }}</mat-card-subtitle> -->
+  <p> {{ category.description }}</p>
+
+  }
+</mat-card-header>
+<img mat-card-image src={{recipe?.image}}>
+<mat-card-content>
+  <h2 class="difficulty-title">דרגת קושי:</h2>
+  <!-- example.component.html -->
+  <!-- <div *ngIf="recipe">
+    <div *appMultiply="3">
+      <app-star></app-star>
+      <span>&#9733;</span> 
+    </div>
+  </div> -->
+
+  <!-- <span>
+    <img *ngFor="let _ of getArray(); let i = index" src="../../../assets/star (1).png" alt="" height="20px"
+      width="20px" />
+    <img *ngFor="let _ of getOpositeArray(); let i = index" src="../../../assets/star.png" alt="" height="20px"
+      width="20px" />
+  </span> -->
+  <span *ngIf="recipe">
+    <img *appMultiply="recipe.difficulty" src="../../../assets/star (1).png" alt="" height="20px" width="20px" />
+    <img *appMultiply="5-(this.recipe.difficulty??0)" src="../../../assets/star.png" alt="" height="20px"
+      width="20px" />
+  </span>
+  <p>{{recipe?.preparationTimeInMinutes|time}}זמן הכנה</p>
+  <h2 class="difficulty-title"> שכבות:</h2>
+
+  <mat-list>
+    @for (layer of layers; track layer.description) {
+    <!-- <mat-list-item> -->
+    <!-- <mat-icon matListItemIcon>folder_open</mat-icon> -->
+    <h3>{{ layer.description }}</h3>
+    <p matListItemLine>
+      <!-- @for (ingredient of layer.ingredients; track $index) {
+    <p class="demo-2"> {{ ingredient }}</p>
+    } -->
+    <mat-list>
+      <mat-list-item *ngFor="let ingredient of layer.ingredients;index as i">
+        <li class="demo-2"> {{i+1}} {{ingredient}}</li>
+      </mat-list-item>
+    </mat-list>
+    </p>
+    <!-- </mat-list-item> -->
+    }
+  </mat-list>
+
+  <h2 class="instructions-title">אופן ההכנה:</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let instruction of recipe?.instructions;index as i">
+      <li class="demo-2"> {{i+1}} {{instruction}}</li>
+    </mat-list-item>
+  </mat-list>
+
+</mat-card-content>
+<div class="example-button-container" *ngIf="isOwnRecipe">
+  <!-- <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="delete()">
+    למחיקת המתכון
+  </button> -->
+  <button mat-raised-button color="warn" (click)="deleteRecipe()">למחיקת המתכון</button>
+
+  <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="edit()">
+    לעריכת המתכון
+  </button>
+</div>
+<!-- </mat-grid-tile>
+
+</div> -->

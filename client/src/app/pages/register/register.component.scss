@@ -1,0 +1,135 @@
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+
+  mat-card {
+    margin: 20px 0;
+    padding: 20px;
+
+    mat-card-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .date {
+        font-size: 1em;
+        color: #757575;
+        /* צבע מותאם אישית לתאריך */
+      }
+
+      mat-card-title {
+        h1 {
+          font-size: 2em;
+          margin: 0;
+          color: #3f51b5;
+          /* צבע מותאם אישית לכותרת */
+        }
+
+        h3 {
+          font-size: 1.5em;
+          margin: 10px 0;
+          color: #757575;
+          /* צבע מותאם אישית לכותרת משנה */
+        }
+      }
+
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+
+        mat-card-subtitle {
+          margin: 5px 10px;
+          font-size: 1em;
+          color: #616161;
+          /* צבע מותאם אישית לקטגוריות */
+        }
+      }
+    }
+
+    img.mat-card-image {
+      max-height: 300px;
+      object-fit: cover;
+      margin: 20px 0;
+    }
+
+    mat-card-content {
+
+      .difficulty-title,
+      .layer-title,
+      .instructions-title {
+        font-size: 1.5em;
+        margin: 20px 0 10px;
+        color: #3f51b5;
+        /* צבע מותאם אישית לכותרות */
+      }
+
+      .difficulty-stars {
+        display: flex;
+        margin-bottom: 10px;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+
+      .ingredient,
+      .instruction {
+        font-size: 1em;
+        color: #424242;
+        /* צבע מותאם אישית למרכיבים ולהוראות */
+      }
+
+      p {
+        font-size: 1em;
+        color: #757575;
+        /* צבע מותאם אישית לזמן הכנה */
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      button {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+form {
+  max-width: 600px; // Set the maximum width of the form
+  margin: 0 auto; // Center the form on the page
+  direction: rtl; // Set text direction to right-to-left
+  
+  .form-row {
+    margin-bottom: 20px; // Space between form fields
+  }
+  
+  .mat-label {
+    display: block;
+    margin-bottom: 5px; // Space between label and input
+  }
+  
+  .mat-form-field {
+    width: 100%; // Ensure form fields take full width of the form
+  }
+  
+  .errors {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px; // Space between input and error message
+    ul {
+      padding-right: 15px; // Adjust padding for RTL direction
+      list-style: none; // Remove bullet points
+      margin: 0;
+    }
+  }
+  
+  button {
+    display: block;
+    margin: 20px 0; // Space above and below the button
+  }
+}

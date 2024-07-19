@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<!-- <form class="example-form">
+  <mat-label>טקסט לחיפוש</mat-label>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="חפש" value="" #name>
+  </mat-form-field>
+ 
+  <mat-label>בחר קטגוריה</mat-label>
+  <mat-form-field>
+    <select matNativeControl [disabled]="disableSelect.value" (change)="selectCategory($event)">
+      @for (category of categories; track category._id) {
+      <option value={{category._id}}>{{category.description}}</option>
+      }
+      <option value="" selected></option>
+    </select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" placeholder="הזן מספר" #preparationTimeInMinutes>
+  </mat-form-field>
+
+  <section>
+    <div class="example-button-row">
+      <button mat-button (click)="search(name.value,+preparationTimeInMinutes.value)">חפש</button>
+    </div>
+  </section>
+</form> -->
+
+<form class="example-form">
+  <mat-label>טקסט לחיפוש</mat-label>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="חפש" value="" #name>
+  </mat-form-field>
+<br/>
+  <mat-label>בחר קטגוריה</mat-label>
+  <mat-form-field>
+    <select matNativeControl [disabled]="disableSelect.value" (change)="selectCategory($event)">
+      @for (category of categories; track category._id) {
+      <option value={{category.description}}>{{category.description}}</option>
+      }
+      <option value="" selected></option>
+    </select>
+  </mat-form-field>
+
+  <br/>
+
+  <mat-label>הזן מספר דקות הכנה</mat-label>
+  <mat-form-field>
+    <input matInput type="number" placeholder="הזן מספר" #preparationTimeInMinutes>
+  </mat-form-field>
+
+  <section>
+    <div class="example-button-row">
+      <button (click)="search(name.value,+preparationTimeInMinutes.value)">חפש</button>
+    </div>
+  </section>
+</form>
+
+@for (recipe of recipes; track recipe._id) {
+<app-recipe [recipe]="recipe"></app-recipe>
+}
+<!-- <mat-divider></mat-divider> -->
+<section>
+  <div class="example-button-row">
+    <button mat-stroked-button color="primary" (click)="next()">למתכונים נוספים</button>
+    <!-- <button mat-stroked-button disabled>Disabled</button> -->
+  </div>
+</section>
+<!-- <mat-divider></mat-divider> -->

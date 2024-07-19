@@ -1,0 +1,4 @@
+<app-navbar></app-navbar>
+@for (recipe of recipes; track recipe._id) {
+<app-recipe [recipe]="recipe"></app-recipe>
+}

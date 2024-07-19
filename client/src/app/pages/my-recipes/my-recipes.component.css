@@ -1,0 +1,34 @@
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.content .example-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content .example-form .example-full-width {
+  width: 100%;
+}
+.content .example-form .button-section {
+  display: flex;
+  justify-content: flex-start;
+}
+.content .example-form .button-section button {
+  margin-top: 10px;
+}
+.content .recipes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.content .pagination-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.content .pagination-section button {
+  margin: 10px;
+}/*# sourceMappingURL=my-recipes.component.css.map */

@@ -1,0 +1,42 @@
+.app-bar {
+    background-color: #3f51b5; // צבע הרקע של ה-AppBar
+    display: flex;
+    justify-content: space-between;
+    
+    .app-bar-logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffffff; // צבע הלוגו
+    }
+  
+    .spacer {
+      flex: 1 1 auto;
+    }
+  
+    .nav-link {
+      color: #ffffff; // צבע ברירת המחדל של הניתובים
+      
+      margin-left: 10px;
+      
+      &:hover {
+        background-color: #303f9f; // צבע רקע של הניתובים כאשר הם במצב hover
+      }
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+  p{
+    text-align: right;
+  }
+  .content {
+    padding: 20px;
+    text-align: center;
+
+    .greeting {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #3f51b5;
+        /* צבע מותאם אישית לברכת שלום */
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,68 @@
+// .example-card {
+//     max-width: 400px;
+//   }
+  
+//   .example-header-image {
+//     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//     background-size: cover;
+//   }
+
+//   .example-form {
+//     min-width: 150px;
+//     max-width: 500px;
+//     width: 100%;
+//   }
+  
+//   .example-full-width {
+//     width: 100%;
+//   }
+
+
+.example-card {
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  mat-card-header {
+    display: flex;
+    align-items: center;
+
+    .example-header-image {
+      // background-image: url('path/to/your/avatar/image.jpg');
+      background-size: cover;
+      border-radius: 50%;
+    }
+
+    mat-card-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #3f51b5; /* צבע כותרת מותאם אישית */
+    }
+
+    mat-card-subtitle {
+      font-size: 1em;
+      color: #757575; /* צבע תת-כותרת מותאם אישית */
+    }
+  }
+
+  img.mat-card-image {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  mat-card-content {
+    p {
+      font-size: 1.2em;
+      color: #424242; /* צבע טקסט מותאם אישית */
+    }
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      color: #ff4081; /* צבע כפתור מותאם אישית */
+    }
+  }
+}

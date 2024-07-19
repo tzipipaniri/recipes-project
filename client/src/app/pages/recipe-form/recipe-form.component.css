@@ -1,0 +1,136 @@
+@charset "UTF-8";
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.custom-select {
+  width: 200px; /* רוחב ה-select */
+  height: auto; /* גובה אוטומטי */
+  min-height: 50px; /* גובה מינימלי */
+  padding: 5px; /* רווח פנימי */
+  font-size: 14px; /* גודל גופן */
+}
+
+.cdk-overlay-pane {
+  position: fixed !important; /* מונע מה-options להיות מחוץ למסך */
+  bottom: auto !important; /* מונע הצגת ה-options בתחתית הדף */
+  max-height: 80vh; /* הגבלת הגובה של ה-overlay */
+  overflow-y: auto; /* הוספת גלילה ל-overlay */
+}
+
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 1000; /* התאמה ל-index ז שאינו מתנגש עם שאר האתר */
+}
+
+.custom-overlay-container .cdk-overlay-pane {
+  position: fixed !important;
+  bottom: auto !important;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Arrange elements vertically */
+  max-width: 500px; /* Set maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add some padding for spacing */
+  direction: rtl; /* Set overall text direction to right-to-left */
+}
+
+.form-field {
+  display: flex; /* Enable Flexbox for each field */
+  flex-direction: row-reverse; /* Arrange field labels and inputs from right to left */
+  justify-content: space-between; /* Distribute space evenly between label and input */
+  margin-bottom: 20px; /* Add spacing between fields */
+  flex-basis: 200px; /* Set initial width for each field */
+  flex-wrap: wrap; /* Allow fields to wrap to multiple lines */
+}
+
+.form-label {
+  flex: 1; /* Allocate equal width to labels */
+  padding-left: 10px; /* Add some left padding for separation */
+}
+
+.form-input {
+  flex: 1; /* Allocate equal width to inputs */
+}
+
+.mat-form-field {
+  width: 100%; /* Make mat-form-field occupy full width of its container */
+}
+
+mat-input,
+textarea {
+  width: 100%; /* Make inputs and textareas span the full width of their container */
+  padding: 10px; /* Add some padding for input fields */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px; /* Add rounded corners */
+  direction: rtl; /* Set text direction for inputs and textareas to right-to-left */
+}
+
+mat-select {
+  width: 100%; /* Make mat-select span the full width of its container */
+  padding: 10px; /* Add some padding for select field */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px; /* Add rounded corners */
+  direction: rtl; /* Set text direction for mat-select to right-to-left */
+}
+
+.mat-error {
+  width: 100%; /* Make error messages span the full width of their container */
+  color: red; /* Set error message color to red */
+  margin-top: 5px; /* Add some margin above error messages */
+  direction: rtl; /* Set text direction for error messages to right-to-left */
+}
+
+h1 {
+  margin-top: 20px; /* Add spacing above the "Layers" heading */
+  margin-bottom: 10px; /* Add spacing below the "Layers" heading */
+  direction: rtl; /* Set text direction for heading to right-to-left */
+}
+
+.layer {
+  display: flex; /* Enable Flexbox for each layer */
+  flex-direction: row-reverse; /* Arrange layer components from right to left */
+  justify-content: space-between; /* Distribute space evenly between components */
+  margin-bottom: 10px; /* Add spacing between layers */
+  border: 1px solid #ccc; /* Add a subtle border to each layer */
+  padding: 10px; /* Add some padding for layer content */
+  flex-basis: 200px; /* Set initial width for each layer */
+  flex-wrap: wrap; /* Allow layers to wrap to multiple lines */
+  direction: rtl; /* Set text direction for layer content to right-to-left */
+}
+
+.layer-description {
+  flex: 1; /* Allocate equal width to layer descriptions */
+  padding-left: 10px; /* Add some left padding for separation */
+}
+
+.layer-ingredients {
+  flex: 1; /* Allocate equal width to layer ingredients */
+}
+
+.layer-ingredients input {
+  margin-bottom: 5px; /* Add some spacing between ingredient input fields */
+  direction: rtl; /* Set text direction for ingredient input text to right-to-left */
+}
+
+.layer-button {
+  margin-right: 10px; /* Add some right margin for the remove button */
+}/*# sourceMappingURL=recipe-form.component.css.map */

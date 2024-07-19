@@ -1,0 +1,42 @@
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  
+    .example-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .example-full-width {
+        width: 100%;
+      }
+  
+      .button-section {
+        display: flex;
+        justify-content: flex-start;
+  
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
+  
+    .recipes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+  
+    .pagination-section {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  
+      button {
+        margin: 10px;
+      }
+    }
+  }
+  

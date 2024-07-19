@@ -1,0 +1,23 @@
+<!-- <h1 mat-dialog-title>Recipe Deleted</h1>
+<div mat-dialog-content>
+  <p>The recipe has been deleted successfully.</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Close</button>
+</div> -->
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile colspan="1">
+    <h1>מחיקת מתכון</h1>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <mat-dialog-content>
+      <p>המתכון נמחק בהצלחה</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <div class="responsive-actions">
+        <button mat-button (click)="closeDialog()">סגור</button>
+      </div>
+    </mat-dialog-actions>
+  </mat-grid-tile>
+</mat-grid-list>

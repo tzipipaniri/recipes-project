@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.app-bar {
+  background-color: #3f51b5; /* Your primary color */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px; /* Add some padding for spacing */
+}
+
+.app-bar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff; /* White text for logo */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-link {
+  color: #ffffff; /* White text for links */
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+}
+.nav-link:hover {
+  background-color: #303f9f; /* Subtle hover effect */
+}
+
+.app-bar {
+  background-color: #3f51b5; /* צבע ראשי */
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px; /* הוספת רווח */
+}
+
+.app-bar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff; /* טקסט לבן ללוגו */
+  margin-right: auto; /* להצמדת הלוגו לשמאל */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* רווח בין הניתובים */
+}
+
+.nav-links button {
+  background-color: #f5f5f5; /* צבע רקע בהיר לכל כפתור */
+  color: #3f51b5; /* צבע טקסט */
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none; /* הסרת קו תחתון */
+  border-radius: 4px; /* פינות מעוגלות */
+  padding: 5px 10px; /* הוספת רווח פנימי */
+}
+
+.nav-links button:hover {
+  background-color: #e0e0e0; /* אפקט ריחוף */
+}/*# sourceMappingURL=navbar.component.css.map */

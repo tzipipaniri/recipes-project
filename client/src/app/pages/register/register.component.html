@@ -1,0 +1,141 @@
+<!-- <app-navbar></app-navbar>
+<form ngForm #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div ngModelGroup="name">
+    <mat-label>שם משתמש</mat-label>
+    <mat-form-field>
+      <input matInput type="text" name="username" ngModel [(ngModel)]="username" #usernameModel="ngModel" required>
+    </mat-form-field>
+   
+    <div class="errors" *ngIf="passwordModel.dirty && passwordModel.errors">
+      <ul>
+        <li *ngIf="passwordModel.errors?.['required']">סיסמא נדרשת.</li>
+      </ul>
+    </div>
+
+    <mat-label>סיסמא</mat-label>
+    <mat-form-field>
+      <input matInput type="text" name="password" ngModel [(ngModel)]="password" #passwordModel="ngModel" required>
+    </mat-form-field>
+    <div class="errors" *ngIf="passwordModel.dirty && passwordModel.errors">
+      {{ passwordModel.errors | json }}
+    </div>
+
+    <mat-label>שם פרטי</mat-label>
+    <mat-form-field>
+      <input matInput type="text" name="firstName" ngModel #firstNameModel="ngModel" required>
+    </mat-form-field>
+    <div class="errors" *ngIf="firstNameModel.dirty && firstNameModel.errors">
+      {{ firstNameModel.errors | json }}
+    </div>
+    <mat-label>שם משפחהe</mat-label>
+    <mat-form-field>
+      <input matInput type="text" name="lastName" ngModel #lastNameModel="ngModel" required>
+    </mat-form-field>
+    <div class="errors" *ngIf="lastNameModel.dirty && lastNameModel.errors">
+      {{ lastNameModel.errors | json }}
+    </div>
+
+    <mat-label>מייל</mat-label>
+    <mat-form-field>
+      <input type="email" pattern=".+@.+\..+" #emailModel="ngModel" ngModel [value]="emailModel" name="email" id=""
+        required matInput>
+    </mat-form-field>
+    <div class="errors" *ngIf="emailModel.dirty && emailModel.errors">
+      {{ emailModel.errors | json }}
+    </div>
+    <mat-label>כתובת</mat-label>
+    <mat-form-field>
+      <input matInput type="text" name="address" ngModel #addressModel="ngModel" required>
+    </mat-form-field>
+    <div class="errors" *ngIf="addressModel.dirty && addressModel.errors">
+      {{ addressModel.errors | json }}
+    </div>
+    <button mat-fab extended [type]="" [disabled]="myForm.invalid">
+      שלח
+    </button>
+
+  </div>
+</form> -->
+
+<app-navbar></app-navbar>
+<form ngForm #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div ngModelGroup="name">
+    <div class="form-row">
+      <mat-label>שם משתמש</mat-label>
+      <mat-form-field>
+        <input matInput type="text" name="username" ngModel [(ngModel)]="username" #usernameModel="ngModel" required>
+      </mat-form-field>
+      <div class="errors" *ngIf="usernameModel.dirty && usernameModel.errors">
+        <ul>
+          <li *ngIf="usernameModel.errors?.['required']">שם משתמש נדרש.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <mat-label>סיסמא</mat-label>
+      <mat-form-field>
+        <input matInput type="password" name="password" ngModel [(ngModel)]="password" #passwordModel="ngModel" required>
+      </mat-form-field>
+      <div class="errors" *ngIf="passwordModel.dirty && passwordModel.errors">
+        <ul>
+          <li *ngIf="passwordModel.errors?.['required']">סיסמא נדרשת.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <mat-label>שם פרטי</mat-label>
+      <mat-form-field>
+        <input matInput type="text" name="firstName" ngModel #firstNameModel="ngModel" required>
+      </mat-form-field>
+      <div class="errors" *ngIf="firstNameModel.dirty && firstNameModel.errors">
+        <ul>
+          <li *ngIf="firstNameModel.errors?.['required']">שם פרטי נדרש.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <mat-label>שם משפחה</mat-label>
+      <mat-form-field>
+        <input matInput type="text" name="lastName" ngModel #lastNameModel="ngModel" required>
+      </mat-form-field>
+      <div class="errors" *ngIf="lastNameModel.dirty && lastNameModel.errors">
+        <ul>
+          <li *ngIf="lastNameModel.errors?.['required']">שם משפחה נדרש.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <mat-label>מייל</mat-label>
+      <mat-form-field>
+        <input type="email" pattern=".+@.+\..+" #emailModel="ngModel" ngModel [value]="emailModel" name="email" id=""
+          required matInput>
+      </mat-form-field>
+      <div class="errors" *ngIf="emailModel.dirty && emailModel.errors">
+        <ul>
+          <li *ngIf="emailModel.errors?.['required']">מייל נדרש.</li>
+          <li *ngIf="emailModel.errors?.['pattern']">כתובת המייל אינה תקינה.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <mat-label>כתובת</mat-label>
+      <mat-form-field>
+        <input matInput type="text" name="address" ngModel #addressModel="ngModel" required>
+      </mat-form-field>
+      <div class="errors" *ngIf="addressModel.dirty && addressModel.errors">
+        <ul>
+          <li *ngIf="addressModel.errors?.['required']">כתובת נדרשת.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button mat-fab extended [type]="" [disabled]="myForm.invalid">
+      שלח
+    </button>
+  </div>
+</form>

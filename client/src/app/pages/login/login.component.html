@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="login-container">
+  <h2>התחברות</h2>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <mat-label>שם משתמש</mat-label>
+    <mat-form-field appearance="fill">
+      <input matInput name="userName" ngModel required>
+      <mat-error *ngIf="form.submitted && !form.controls['userName'].valid">
+        שם משתמש חובה
+      </mat-error>
+    </mat-form-field>
+    <mat-label>סיסמה</mat-label>
+    <mat-form-field appearance="fill">
+      <input matInput name="password" type="password" [(ngModel)]="password" required>
+      <mat-error *ngIf="form.submitted && !form.controls['password'].valid">
+       סיסמא חובה
+      </mat-error>
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" type="submit" (click)="setAction('signin')">התחברות</button>
+      <button mat-raised-button color="accent" type="submit" (click)="setAction('signup'); onSubmit(form)">הרשמה</button>
+    </div>
+  </form>
+</div> 

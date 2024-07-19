@@ -1,0 +1,39 @@
+@charset "UTF-8";
+.example-card {
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.example-card mat-card-header {
+  display: flex;
+  align-items: center;
+}
+.example-card mat-card-header .example-header-image {
+  background-size: cover;
+  border-radius: 50%;
+}
+.example-card mat-card-header mat-card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #3f51b5; /* צבע כותרת מותאם אישית */
+}
+.example-card mat-card-header mat-card-subtitle {
+  font-size: 1em;
+  color: #757575; /* צבע תת-כותרת מותאם אישית */
+}
+.example-card img.mat-card-image {
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.example-card mat-card-content p {
+  font-size: 1.2em;
+  color: #424242; /* צבע טקסט מותאם אישית */
+}
+.example-card mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.example-card mat-card-actions button {
+  color: #ff4081; /* צבע כפתור מותאם אישית */
+}/*# sourceMappingURL=recipe.component.css.map */

@@ -1,0 +1,23 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{recipe?.name}}</mat-card-title>
+    <mat-card-subtitle>דקות {{recipe?.preparationTimeInMinutes}} </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{recipe?.image}} alt={{recipe?.name}}>
+  <mat-card-content>
+    <p>
+      דרגת קושי
+    </p>
+    <span *ngIf="recipe">
+      <img *appMultiply="recipe.difficulty" src="../../../assets/star (1).png" alt="" height="20px" width="20px" />
+      <img *appMultiply="5-(this.recipe.difficulty??0)" src="../../../assets/star.png" alt="" height="20px"
+        width="20px" />
+    </span>
+
+  </mat-card-content>
+  <mat-card-actions *ngIf="user">
+    <!-- <button mat-button (click)="display(recipe?._id)">LIKE</button> -->
+    <button mat-button (click)="details()">לפרטי המתכון</button>
+  </mat-card-actions>
+</mat-card>

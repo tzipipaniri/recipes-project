@@ -1,0 +1,345 @@
+// .material-symbols-outlined {
+//   font-variation-settings:
+//   'FILL' 0,
+//   'wght' 400,
+//   'GRAD' 0,
+//   'opsz' 24
+// }
+
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+
+  mat-card {
+    margin: 20px 0;
+    padding: 20px;
+
+    mat-card-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .date {
+        font-size: 1em;
+        color: #757575; /* צבע מותאם אישית לתאריך */
+      }
+
+      mat-card-title {
+        h1 {
+          font-size: 2em;
+          margin: 0;
+          color: #3f51b5; /* צבע מותאם אישית לכותרת */
+        }
+        h3 {
+          font-size: 1.5em;
+          margin: 10px 0;
+          color: #757575; /* צבע מותאם אישית לכותרת משנה */
+        }
+      }
+
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+
+        mat-card-subtitle {
+          margin: 5px 10px;
+          font-size: 1em;
+          color: #616161; /* צבע מותאם אישית לקטגוריות */
+        }
+      }
+    }
+
+    img.mat-card-image {
+      max-height: 300px;
+      object-fit: cover;
+      margin: 20px 0;
+    }
+
+    mat-card-content {
+      .difficulty-title,
+      .layer-title,
+      .instructions-title {
+        font-size: 1.5em;
+        margin: 20px 0 10px;
+        color: #3f51b5; /* צבע מותאם אישית לכותרות */
+      }
+
+      .difficulty-stars {
+        display: flex;
+        margin-bottom: 10px;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+
+      .ingredient,
+      .instruction {
+        font-size: 1em;
+        color: #424242; /* צבע מותאם אישית למרכיבים ולהוראות */
+      }
+
+      p {
+        font-size: 1em;
+        color: #757575; /* צבע מותאם אישית לזמן הכנה */
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      button {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+
+
+
+/* General form styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form labels */
+mat-label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Form fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+mat-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Textarea */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Errors */
+mat-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Select */
+mat-select {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+mat-select-trigger {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+mat-option {
+  padding: 8px;
+}
+
+/* Buttons */
+mat-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+mat-button:hover {
+  background-color: #0056b3;
+}
+
+/* Layers section */
+.layers-section {
+  margin-top: 20px;
+}
+
+.layer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.layer input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.layer button {
+  background-color: #dc3545;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.layer button:hover {
+  background-color: #c82333;
+}
+
+/* Image upload */
+.image-upload {
+  margin-top: 20px;
+}
+
+.image-upload label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.image-upload input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.image-preview {
+  margin-top: 10px;
+  width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Private checkbox */
+.mat-checkbox {
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .form-container {
+    width: 95%;
+  }
+}
+html, body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+mat-card {
+  max-width: 600px; // Set the maximum width of the card
+  margin: 0 auto; // Center the card on the page
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+mat-card-header, mat-card-content, .example-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center items horizontally
+  text-align: center; // Center text
+}
+
+mat-card-header {
+  margin-bottom: 20px; // Add some space between the header and the content
+}
+
+mat-card-title, mat-card-subtitle {
+  margin: 0; // Remove default margins
+}
+
+img {
+  max-width: 100%;
+    max-height: 300px; // Set a maximum height for the image
+    display: block;
+    margin: 20px auto;
+    object-fit: cover; // Ensures the image covers the area and maintains aspect ratio
+}
+
+.difficulty-title, .instructions-title {
+  margin: 20px 0; // Add some space above and below the titles
+}
+
+span {
+  display: flex;
+  justify-content: center; // Center the stars horizontally
+  margin: 10px 0; // Add some space around the stars
+}
+li{
+  direction: rtl;
+}
+
+mat-list {
+  width: 100%; // Ensure the list takes the full width of the card
+}
+
+mat-list-item {
+  justify-content: center; // Center the list items
+  text-align: center; // Center text within list items
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center; // Center the buttons horizontally
+  gap: 10px; // Add some space between the buttons
+  margin-top: 20px; // Add some space above the button container
+}
+@media (max-width: 768px) {
+  // padding: 10px;
+
+  .difficulty-title,
+  .instructions-title {
+    margin: 10px 0;
+  }
+
+  .example-button-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  // padding : 5px;
+
+  .example-button-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  img.mat-card-image {
+    margin: 10px auto;
+  }
+}
